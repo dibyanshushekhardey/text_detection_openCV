@@ -22,8 +22,8 @@ for x, c in enumerate(data.splitlines()):
             #Initialize four variables for x-coordinate, y- coordinate, width, height.
             x, y, w, h = int(c[6]), int(c[7]), int(c[8]), int(c[9])
             
-            cv2.rectangle(tst_img, (x, y), (w + x, h + y), (0, 0, 255), 2)
-            cv2.putText(tst_img, c[11], (x, y), cv2.FONT_HERSHEY_COMPLEX, 1, (50, 50, 255), 2) 
+            cv2.rectangle(tst_img, (x, y), (w + x, h + y), (0, 0, 255), 2) #to create boxes around the characters.
+            cv2.putText(tst_img, c[11], (x, y), cv2.FONT_HERSHEY_COMPLEX, 1, (50, 50, 255), 2) # to add labels around the characters.
 
 #display the image giving it a window name
 cv2.imshow('Result', tst_img)
