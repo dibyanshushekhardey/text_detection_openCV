@@ -1,7 +1,9 @@
+#importing necessary modules
 import cv2
 import pytesseract as ptr
 
 ptr.pytesseract.tesseract_cmd = 'E:/Python_Files/tesseract/tesseract.exe'
+#reading the image file
 tst_img = cv2.imread('Test_img.jpg')
 
 tst_img = cv2.cvtColor(tst_img, cv2.COLOR_BGR2RGB)
